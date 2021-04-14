@@ -6,12 +6,8 @@ get_header();
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> <!-- wp loop -->
 
-		<section class="introducao-interna interna_portfolio">
-			<div class="container">
-				<h1>Portfólio</h1>
-				<p>conheça os projetos que amamos mostrar</p>
-			</div>
-		</section>
+
+		<?php include(TEMPLATEPATH . "/includes/intro-interna.php"); ?> <!-- Include Introdução Interna -->
 
 		<section class="container animar-interno">
 			<ul class="rslides">
@@ -38,32 +34,9 @@ get_header();
 			</ul>
 		</section>
 
-		<section class="portfolio">
-			<div class="container">
-				<ul class="portfolio_lista rslides_portfolio">
+		<?php include(TEMPLATEPATH . "/includes/galeria-portfolio.php"); ?> <!-- Include Fotos do Portfólio -->
 
-					<li>
-						<div class="grid-8"><img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/retro.jpg" alt="Bicicleta Retrô"></div>
-						<div class="grid-8"><img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/passeio.jpg" alt="Bicicleta Passeio"></div>
-						<div class="grid-16"><img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/esporte.jpg" alt="Bicicleta Esporte"></div>
-					</li>
-
-					<li>
-						<div class="grid-8"><img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/passeio.jpg" alt="Bicicleta Passeio"></div>
-						<div class="grid-8"><img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/retro.jpg" alt="Bicicleta Retrô"></div>
-						<div class="grid-16"><img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/esporte.jpg" alt="Bicicleta Esporte"></div>
-					</li>
-
-				</ul>
-			</div>
-		</section>
-
-		<div class="quebra">
-			<blockquote class="quote-externo container">
-				<p>“o verdadeiro segredo da felicidade está em ter um genuíno interesse por todos os detalhes da vida cotidiana.”</p>
-				<cite>WILLIAM MORRIS</cite>
-			</blockquote>
-		</div>
+		<?php include(TEMPLATEPATH . "/includes/quote-cta.php"); ?> <!-- Include Quote -->
 
 		<?php endwhile; else: ?>
 <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>

@@ -5,12 +5,16 @@ get_header();
 ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> <!-- wp loop -->
-		<section class="introducao-interna interna_sobre">
+
+<?php include(TEMPLATEPATH . "/includes/intro-interna.php"); ?> <!-- Include Introdução Interna -->
+
+
+		<!-- <section class="introducao-interna interna_sobre">
 			<div class="container">
 				<h1>Sobre</h1>
 				<p>conheça mais sobre a bikcraft</p>
 			</div>
-		</section>
+		</section> -->
 
 		<section class="missao_sobre container animar-interno">
 			<div class="grid-10">
@@ -53,12 +57,7 @@ get_header();
 			</ul>
 		</section>
 
-		<div class="quebra">
-			<blockquote class="quote-externo container">
-				<p>“o verdadeiro segredo da felicidade está em ter um genuíno interesse por todos os detalhes da vida cotidiana.”</p>
-				<cite>WILLIAM MORRIS</cite>
-			</blockquote>
-		</div>
+		<?php include(TEMPLATEPATH . "/includes/quote-cta.php"); ?> <!-- Include Quote -->
 
 		<?php endwhile; else: ?>
 <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>

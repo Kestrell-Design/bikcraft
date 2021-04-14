@@ -6,12 +6,14 @@ get_header();
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> <!-- wp loop -->
 
-		<section class="introducao-interna interna_produtos">
+		<!-- <section class="introducao-interna interna_produtos">
 			<div class="container">
 				<h1>Produtos</h1>
 				<p>conheça todos os nossos produtos</p>
 			</div>
-		</section>
+		</section> -->
+
+		<?php include(TEMPLATEPATH . "/includes/intro-interna.php"); ?> <!-- Include Introdução Interna -->
 
 		<section class="container produto_item animar-interno">
 			<div class="grid-11">
@@ -105,11 +107,7 @@ get_header();
 			</div>
 		</section>
 
-		<div class="quebra">
-			<blockquote class="quote-externo container">
-				<p>“o verdadeiro segredo da felicidade está em ter um genuíno interesse por todos os detalhes da vida cotidiana.”</p>
-				<cite>WILLIAM MORRIS</cite>
-			</blockquote>
+		<?php include(TEMPLATEPATH . "/includes/quote-cta.php"); ?> <!-- Include Quote -->
 		</div>
 
 		<?php endwhile; else: ?>

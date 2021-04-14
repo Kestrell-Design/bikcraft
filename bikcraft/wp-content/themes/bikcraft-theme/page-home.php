@@ -55,20 +55,8 @@
 		</section>
 		<!-- Fecha Produtos -->
 
-		<section class="portfolio">
-			<div class="container">
-				<h2 class="subtitulo">Portfólio</h2>
-				<div class="portfolio_lista">
-					<div class="grid-8"><img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/retro.jpg" alt="Bicicleta Retrô"></div>
-					<div class="grid-8"><img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/passeio.jpg" alt="Bicicleta Passeio"></div>
-					<div class="grid-16"><img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/esporte.jpg" alt="Bicicleta Esporte"></div>
-				</div>
-				<div class="call">
-					<p>conheça mais o nosso portfólio</p>
-					<a href="portfolio.html" class="btn">Portfólio</a>
-				</div>
-			</div>
-		</section>
+
+		<?php include(TEMPLATEPATH . "/includes/galeria-portfolio.php"); ?> <!-- Include Fotos do Portfólio -->
 
 		<section class="qualidade container">
 			<h2 class="subtitulo">Qualidade</h2>
@@ -93,12 +81,9 @@
 			</div>
 		</section>
 
-		<div class="quebra">
-			<blockquote class="quote-externo container">
-				<p>“o verdadeiro segredo da felicidade está em ter um genuíno interesse por todos os detalhes da vida cotidiana.”</p>
-				<cite>WILLIAM MORRIS</cite>
-			</blockquote>
-		</div>
+		<?php include(TEMPLATEPATH . "/includes/quote-cta.php"); ?> <!-- Include Quote -->
+
+	
 
 		<?php endwhile; else: ?>
 <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
