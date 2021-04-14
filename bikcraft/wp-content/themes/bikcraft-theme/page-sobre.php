@@ -9,13 +9,6 @@ get_header();
 <?php include(TEMPLATEPATH . "/includes/intro-interna.php"); ?> <!-- Include Introdução Interna -->
 
 
-		<!-- <section class="introducao-interna interna_sobre">
-			<div class="container">
-				<h1>Sobre</h1>
-				<p>conheça mais sobre a bikcraft</p>
-			</div>
-		</section> -->
-
 		<section class="missao_sobre container animar-interno">
 			<div class="grid-10">
 				<h2 class="subtitulo-interno">História, Missão e Visão</h2>
@@ -38,24 +31,7 @@ get_header();
 
 		</section>
 
-		<section class="qualidade container">
-			<h2 class="subtitulo">Qualidade</h2>
-			<img src="<?php echo get_template_directory_uri(); ?>/img/bikcraft-qualidade.png" alt="Bikcraft">
-			<ul class="qualidade_lista">
-				<li class="grid-1-3">
-					<h3>Durabilidade</h3>
-					<p>Sólida como pedra, leve como o vento e resistente como o diamante, são nossos diferenciais.</p>
-				</li>
-				<li class="grid-1-3">
-					<h3>Design</h3>
-					<p>Feitas sob medida para o melhor conforto e eficiência. Adaptamos a sua Bikcraft para o seu corpo.</p>
-				</li>
-				<li class="grid-1-3">
-					<h3>Sustentabilidade</h3>
-					<p>Além de ajudar a cuidar do meio ambiente, tirando carros da rua, toda a produção é sustentável.</p>
-				</li>
-			</ul>
-		</section>
+		<?php include(TEMPLATEPATH . "/includes/qualidade-bikcraft.php"); ?> <!-- Include Qualidade Bikcraft -->
 
 		<?php include(TEMPLATEPATH . "/includes/quote-cta.php"); ?> <!-- Include Quote -->
 
