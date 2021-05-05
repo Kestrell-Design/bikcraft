@@ -5,10 +5,7 @@ body {
 }
 
 p {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 14px;
-  line-height: 20px;
-  color: red;
+  @include tipo-2(14);
 }
 
 img {
@@ -23,51 +20,49 @@ img {
 
 #form-erro span,
 #form-send span {
-  font-size: 18px;
-  line-height: 25px;
+  @include tipo-1(18);
   margin-bottom: 10px;
   display: block;
 }
 
 #form-send {
-  color: #31aa39;
+  color: $sucesso;
 }
 
 #form-erro {
-  color: #f64540;
+  color: $erro;
 }
 
 .btn {
-  border: 3px solid #fec63e;
+  border: 3px solid $cor-primaria;
   padding: 10px 30px;
-  color: #fec63e;
-  font-size: 14px;
-  line-height: 20px;
+  color: $cor-primaria;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.1em;
   transition: all 0.5s ease;
+  @include tipo-1(14);
 }
 
 .btn:hover {
-  color: #fff;
-  border-color: #fff;
+  color: $branco;
+  border-color: $branco;
 }
 
 .btn.btn-preto:hover {
-  color: #000;
-  border-color: #000;
+  color: $preto;
+  border-color: $preto;
 }
 
 .subtitulo {
-  font-size: 24px;
-  line-height: 30px;
   font-weight: bold;
   letter-spacing: 0.1em;
-  color: #000;
+  color: $preto;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 40px;
+  @include tipo-1(24);
+  line-height: 30px;
 }
 
 .subtitulo:after {
@@ -75,18 +70,18 @@ img {
   display: block;
   width: 60px;
   height: 3px;
-  background: #000;
+  background: $preto;
   margin: 8px auto;
 }
 
 .subtitulo-interno {
-  font-size: 24px;
-  line-height: 30px;
   font-weight: bold;
   letter-spacing: 0.1em;
-  color: #000;
+  color: $preto;
   text-transform: uppercase;
   margin-bottom: 20px;
+  @include tipo-1(24);
+  line-height: 30px;
 }
 
 .subtitulo-interno:after {
@@ -94,7 +89,7 @@ img {
   display: block;
   width: 60px;
   height: 3px;
-  background: #000;
+  background: $preto;
   margin: 8px 0;
 }
 
@@ -104,7 +99,7 @@ img {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #fec63e; /* Amarelo */
+  background: $cor-primaria; /* Amarelo */
   padding: 15px 0;
   z-index: 10;
 }
@@ -120,22 +115,21 @@ img {
 }
 
 .header_menu ul li a {
-  color: #000;
+  color: $preto;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 14px;
-  line-height: 20px;
   padding: 10px 0;
   transition: all 0.3s ease;
+  @include tipo-1(14);
 }
 
 .header_menu ul li a:hover {
-  color: #fff;
+  color: $branco;
 }
 
 .header_menu ul li a.menu_ativo {
-  color: #fff;
+  color: $branco;
 }
 
 /* Introdução */
@@ -151,10 +145,10 @@ img {
 }
 
 .introducao h1 {
-  font-size: 48px;
-  color: #fff;
+  color: $branco;
   font-weight: bold;
   text-transform: uppercase;
+  @include tipo-1(48);
 }
 
 .quote-externo {
@@ -174,15 +168,15 @@ img {
   display: block;
   width: 60px;
   height: 3px;
-  background: #fff;
+  background: $branco;
   margin: 14px auto 10px auto;
 }
 
 .quote-externo cite {
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
   letter-spacing: 0.1em;
+  @include tipo-1(14);
 }
 
 /*Introducao Interna*/
@@ -192,14 +186,14 @@ img {
   margin-top: 92px;
   height: 160px;
   text-align: center;
-  color: #fff;
+  color: $branco;
   padding-top: 30px;
 }
 
 .introducao-interna h1 {
-  font-size: 36px;
   font-weight: bold;
   text-transform: uppercase;
+  @include tipo-1(36);
 }
 
 .introducao-interna h1:after {
@@ -207,7 +201,7 @@ img {
   display: block;
   width: 60px;
   height: 3px;
-  background: #fff;
+  background: $branco;
   margin: 6px auto 10px auto;
 }
 
@@ -218,7 +212,7 @@ img {
 }
 
 .produtos_lista li {
-  background: #fec63e;
+  background: $cor-primaria;
   text-align: center;
 }
 
@@ -228,11 +222,10 @@ img {
 
 .produtos_lista li h3 {
   font-weight: bold;
-  font-size: 18px;
-  line-height: 25px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-top: 20px;
+  @include tipo-1(18);
 }
 
 .produtos_lista li h3:after {
@@ -240,7 +233,7 @@ img {
   display: block;
   width: 60px;
   height: 3px;
-  background: #000;
+  background: $preto;
   margin: 2px auto;
 }
 
@@ -249,7 +242,7 @@ img {
 }
 
 .produtos_icone {
-  background: #000;
+  background: $preto;
   padding: 20px;
 }
 
@@ -267,16 +260,16 @@ img {
 
 .portfolio {
   width: 100%;
-  background: #000;
+  background: $preto;
   padding: 40px 0;
 }
 
 .portfolio .subtitulo {
-  color: #fec63e;
+  color: $cor-primaria;
 }
 
 .portfolio .subtitulo:after {
-  background: #fec63e;
+  background: $cor-primaria;
 }
 
 .portfolio_lista div:last-of-type {
@@ -284,7 +277,7 @@ img {
 }
 
 .portfolio .call p {
-  color: #fff;
+  color: $branco;
 }
 
 /*Qualidade*/
@@ -321,11 +314,10 @@ img {
 
 .qualidade_lista li h3 {
   font-weight: bold;
-  font-size: 18px;
-  line-height: 25px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-top: 20px;
+  @include tipo-1(18);
 }
 
 .qualidade_lista li h3:after {
@@ -333,7 +325,7 @@ img {
   display: block;
   width: 60px;
   height: 3px;
-  background: #000;
+  background: $preto;
   margin: 6px auto;
 }
 
@@ -356,18 +348,17 @@ img {
 
 .footer {
   width: 100%;
-  background: #000;
-  color: #fff;
+  background: $preto;
+  color: $branco;
   padding: 20px 0;
 }
 
 .footer h3 {
-  font-size: 18px;
-  line-height: 25px;
-  color: #fec63e;
+  color: $cor-primaria;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: bold;
+  @include tipo-1(18);
 }
 
 .footer h3:after {
@@ -375,7 +366,7 @@ img {
   display: block;
   width: 60px;
   height: 3px;
-  background: #fec63e;
+  background: $cor-primaria;
   margin: 6px 0 12px 0;
 }
 
@@ -384,9 +375,7 @@ img {
 }
 
 .footer_contato ul li {
-  font-size: 14px;
-  line-height: 20px;
-  font-family: Georgia, "Times New Roman", serif;
+  @include tipo-2(14);
 }
 
 .footer_redes ul li {
@@ -395,19 +384,19 @@ img {
 }
 
 .footer_redes ul li a {
-  border: 3px solid #fec63e;
+  border: 3px solid $cor-primaria;
   display: block;
   padding: 10px;
   transition: all 0.5s ease;
 }
 
 .footer_redes ul li a:hover {
-  border-color: #fff;
+  border-color: $branco;
 }
 
 .copy {
   width: 100%;
-  background: #fec63e;
+  background: $cor-primaria;
   padding: 20px 0;
 }
 
